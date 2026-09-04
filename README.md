@@ -22,3 +22,7 @@ Static GitHub Pages **tidak dapat membuat admin benar-benar aman dari pengguna y
 
 ## "Real-time"
 Perubahan antar-tab browser pada perangkat yang sama disinkronkan memakai `storage` event. GitHub Pages tidak menyediakan shared realtime state antar perangkat tanpa backend.
+
+
+### Foto kandidat
+Admin dapat memilih foto untuk masing-masing dari 3 calon. Browser membaca file gambar dan menyimpannya sebagai data URL di `localStorage`, sehingga halaman user pada browser/perangkat yang sama langsung menampilkan foto tersebut. `data.json` tetap menjadi template awal karena GitHub Pages tidak dapat ditulis langsung oleh JavaScript client-side. Ukuran upload dibatasi 2 MB per foto.
